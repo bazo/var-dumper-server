@@ -1,0 +1,13 @@
+version: 3
+
+tasks:
+    js:
+        cmds:
+            - bun dev
+
+    css:
+        cmds:
+            - bun css
+
+    dev:
+        deps: [js, css]

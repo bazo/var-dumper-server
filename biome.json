@@ -1,0 +1,52 @@
+{
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"all": true,
+			"nursery": {
+				"recommended": true,
+				"useAwait": "off",
+				"useImportType": "warn"
+			},
+			"complexity": {
+				"recommended": true
+			},
+			"correctness": {
+				"all": true,
+				"noUnusedVariables": "warn"
+			},
+			"security": {
+				"recommended": true,
+				"noDangerouslySetInnerHtml": "warn"
+			},
+			"a11y": {
+				"recommended": false,
+				"useKeyWithClickEvents": "off",
+				"noSvgWithoutTitle": "off"
+			},
+			"style": {
+				"recommended": true,
+				"noImplicitBoolean": "off"
+			},
+			"suspicious": {
+				"recommended": true,
+				"noPrototypeBuiltins": "warn",
+				"noEmptyInterface": "warn"
+			}
+		},
+		"ignore": [
+			"node_modules",
+			"dist"
+		]
+	},
+	"formatter": {
+		"indentWidth": 4,
+		"lineWidth": 150,
+		"ignore": [
+			".docker",
+			"node_modules",
+			"*.html",
+			".gitignore"
+		]
+	}
+}

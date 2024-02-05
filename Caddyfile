@@ -1,0 +1,24 @@
+{
+	supervisor {
+		php server.php
+		bun server.ts
+	}
+}
+
+:9900 {
+	root * ./
+	encode gzip
+	file_server
+
+	vars {
+		server "localhost:9876"
+	}
+
+	reverse_proxy /api* {vars.server}
+
+	@websockets {
+		header_regexp Connection Upgrade
+		header Upgrade websocket
+	}
+	reverse_proxy @websockets {vars.server}
+}

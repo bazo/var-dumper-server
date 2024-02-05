@@ -1,0 +1,7 @@
+FROM php:cli
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+COPY --from=oven/bun:debian /usr/local/bin/bun /usr/local/bin/bun
+COPY --from=caddy /usr/bin/caddy /usr/local/bin/caddy
+WORKDIR /server
+
+EXPOSE 9912

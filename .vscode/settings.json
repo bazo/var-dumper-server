@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:var-dumper-server}/dumps.sqlite",
+            "name": "dumps"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

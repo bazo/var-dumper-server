@@ -1,0 +1,27 @@
+{
+	"name": "var-dumper-server",
+	"type": "module",
+	"module": "index.ts",
+	"scripts": {
+		"css": "bun tailwindcss -i ./client/style.css -o ./dist/style.css --watch",
+		"css-prod": "bun tailwindcss -i ./client/style.css -o ./dist/style.css",
+		"dev": "bun build ./client/index.tsx --outdir ./dist --watch",
+		"js-prod": "bun build ./client/index.tsx --outdir ./dist",
+		"prod": "bun css-prod; bun js-prod"
+	},
+	"dependencies": {
+		"@tanstack/react-query": "^5.18.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"@types/react": "^18.2.52",
+		"@types/react-dom": "^18.2.18",
+		"tailwindcss": "^3.4.1"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
+}

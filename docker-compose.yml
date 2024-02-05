@@ -1,0 +1,14 @@
+services:
+  php:
+    build:
+      context: .
+      #dockerfile: Dockerfile.local
+      dockerfile: Dockerfile
+    #command: php server.php
+    command: caddy run
+    ports:
+      - 9912:9912
+      - 9900:9900
+    volumes:
+      #- .:/server
+      - ./db:/server/db

@@ -1,0 +1,14 @@
+node_modules
+vendor
+.vscode
+dist
+dumps.sqlite
+dump.php
+Taskfile.yml
+biome.json
+.editorconfig
+.gitignore
+docker-compose.yml
+Dockerfile.local
+README.md
+db
